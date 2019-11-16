@@ -12,14 +12,14 @@ pool:
 variables:
   imageName: 'pipelines-javascript-docker'
 
-steps:
+steps: 1
 - task: Docker@2
   displayName: Build an image
   inputs:
     repository: $(imageName)
     command: build
     Dockerfile: app/Dockerfile
-
+steps: 2
   displayName: Push image
   inputs:
     containerRegistry: |
